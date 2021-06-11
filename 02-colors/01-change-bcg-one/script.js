@@ -12,21 +12,22 @@
 (function() {
 
   
+    let body = document.querySelector("body");
 
     let redBtn = document.querySelector("#red").onclick = function(){
-        this.style.backgroundColor = "red"
+        body.style.backgroundColor = "red"
     }
 
     let greenBtn = document.querySelector("#green").onclick = function(){
-        this.style.backgroundColor = "green"
+        body.style.backgroundColor = "green"
     }
 
     let yellowBtn = document.querySelector("#yellow").onclick = function(){
-        this.style.backgroundColor = "yellow"
+        body.style.backgroundColor = "yellow"
     }
     
     let blueBtn = document.querySelector("#blue").onclick = function(){
-        this.style.backgroundColor = "blue"
+        body.style.backgroundColor = "blue"
     }
 
 
