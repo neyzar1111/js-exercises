@@ -10,9 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    const d = new Date();
+    let h = d.getHours();
+
+    function sayHello(h){
+        if(h < 18){
+            document.querySelector('#target').innerHTML = "Hello"
+        } else{
+            document.querySelector('#target').innerHTML = "Good Evening"
+        }
+    }
+    sayHello(h)
+
+
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
+    // your code here// your code here
 
 })();
+

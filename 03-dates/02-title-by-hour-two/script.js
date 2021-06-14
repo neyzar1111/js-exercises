@@ -11,8 +11,24 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    const d = new Date();
+    const h = d.getHours();
+    const m = d.getMinutes();
 
+    const curTime = h + ':'+ m;
+    console.log(curTime);
+
+    function sayHello (curTime){
+        if(curTime === '17:30'){
+            document.querySelector("#target").innerHTML = "<i>Good evening</i>";
+        }  else {
+            document.querySelector("#target").innerHTML = "<i>Hello</i>";
+        }
+    }
+
+    sayHello(curTime);
+
+    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
 
 })();
