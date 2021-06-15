@@ -12,8 +12,8 @@
 (function() {
 
     var fruits = [
-        "cerise",
-        "durian",
+        "cerise",//+
+        "durian",//+
         "pomme",
         "poire",
         "fraise",
@@ -21,12 +21,18 @@
         "orange",
         "mandarine",
         "fraise",
-        "durian",
+        "durian",//
         "pêche",
-        "cerise",
+        "cerise", //
         "raisin",
-        "cerise",
+        "cerise",//
     ];
 
-    // your code here
+
+
+
+    let s = new Set(fruits);
+    let arr = Array.from(s);
+    console.log(arr);
+
 })();
