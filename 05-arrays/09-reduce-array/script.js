@@ -89,6 +89,12 @@
         },
     ];
 
-    // your code here
+    document.querySelector("#run").addEventListener("click", function(){
+        let ages = [];
+        people.map(e=> ages.push(e.age));
+        let total = ages.reduce((acc, curr)=> acc + curr);
+        console.log(total);
+    });
+
 
 })();
