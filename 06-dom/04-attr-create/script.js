@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+    // let b  = document.getElementById("source").dataset.image; // version 2
 
-    // your code here
+    const attributeSource  = document.getElementById("source");
+    const target  = document.getElementById("target");
+    const newElement = document.createElement('img');
+
+    newElement.setAttribute("src", attributeSource.attributes[1].value);
+    target.appendChild(newElement);
+
+    attributeSource.remove();
 
 })();
