@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+    const target = document.getElementById("target");
+    const myTable = document.createElement("table");
+    target.appendChild(myTable).setAttribute("class", "table");
 
-    // your code here
+    const tableT = document.querySelector(".table");
+
+    for(let i = 1; i <= 10; i++){
+        const row = document.createElement("tr");
+        let tableRow = tableT.appendChild(row)
+        for(let k = 1; k<= 10; k++){
+            const td = document.createElement("td");
+            tableRow.appendChild(td).innerHTML = `${k} * ${i} = ${k*i}`;
+        }
+    }
 
 })();
