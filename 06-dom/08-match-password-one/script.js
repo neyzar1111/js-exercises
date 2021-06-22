@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    function checkInputs(){
+        const pas1 = document.querySelector("#pass-one");
+        const pas2 = document.querySelector("#pass-two");
+        if(pas1.value !== pas2.value){
+            pas1.style.borderColor = "red"
+            pas2.style.borderColor = "red"
+        }
+    }
 
+    document.querySelector('#run').addEventListener('click',checkInputs);
 })();
