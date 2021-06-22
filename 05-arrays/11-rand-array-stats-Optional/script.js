@@ -11,15 +11,18 @@
 
 (function() {
 
+    let domEl  = []
+
     document.getElementById("run").addEventListener("click", function(){
-        let domEl  = []
         for(let i = 1; i <= 10; i++){
             domEl.push(document.querySelector(`#n-${i}`));
 
         }
         console.log(domEl);
         let arr = [];
-         domEl.map((e,i)=>{
+
+
+        domEl.map((e,i)=>{
             for(let k = 1; k <= 100; k++){
                 if(i===0 && k < 11){
                     e.innerHTML += k + " ";
@@ -54,7 +57,6 @@
                 }
             }
         })
-
         //part 2 max and min sum and average
          let max = Math.max(...arr);
          let min = Math.min(...arr);
