@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+    const img = document.querySelector('img');
+    const hoverAttr = img.dataset.hover;
+    const srcAttr = img.src;
+
+    img.addEventListener("mouseenter", function(){
+        console.log('detected mouseover');
+        img.src = hoverAttr;
+    })
+
+    img.addEventListener("mouseleave", function(){
+        console.log('detected mouseleave');
+        img.src = srcAttr;
+    })
 
 })();
