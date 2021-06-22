@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
 
+
+    function validatePass(){
+        const regEx = /(?=.*[\d]){2,}(?=.*[a-zA-Z]).{8,}/g;
+        const input = document.getElementById("pass-one").value;
+        let res = regEx.test(input);
+        if(res){
+            document.getElementById("validity").innerHTML = 'ok';
+        }
+        else{
+            document.getElementById("validity").innerHTML = 'Not ok';
+        }
+    }
+    validatePass();
+    document.getElementById("pass-one").oninput = validatePass;
 })();
