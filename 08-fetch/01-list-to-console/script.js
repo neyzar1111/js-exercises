@@ -8,5 +8,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    fetch('http://localhost:63342/01.js-exercises/_shared/api.json')
+        .then(function (resp) {
+            return resp.json()
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+
 })();
