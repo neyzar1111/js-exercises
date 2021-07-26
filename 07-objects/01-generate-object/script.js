@@ -10,9 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-
+    const data = [
+        {
+            name: "Aichurok",
+            lastname: "Enazarova",
+            age: "25",
+            city:"Ostend",
+            country:"Belgium",
+            hobby: "coding",
+            pets: ['cats', 'dog', 'chikens'],
+            quote:"Firs, think. Second,dream. Third, believe. And finally, dare. -Walt Disney"
+        }
+    ]
     const btn = document.querySelector("#run");
     btn.addEventListener("click", function(){
-
+        for (let item in data[0]){
+            console.log(item + ': ' + data[0][item]);
+        }
     })
+
 })();
