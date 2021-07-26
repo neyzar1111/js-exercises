@@ -26,5 +26,14 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    var o1 = { a: 1 };
+    var o2 = { b: 2 };
+    var o3 = { c: 3 };
+
+    let fillComps = computers.forEach((e,i)=>{
+            return Object.assign(e, defaultProps)
+    })
+    console.log(fillComps)
+
+
 })();

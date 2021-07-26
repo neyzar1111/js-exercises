@@ -19,6 +19,16 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    const btn = document.querySelector("#next");
+    const img = document.querySelector("img");
+    let count = 0;
+    btn.addEventListener("click",function (){
+        count++;
+        if(count < gallery.length){
+            img.src = gallery[count]
+        } else{
+            count = -1;
+        }
+    })
 
 })();
