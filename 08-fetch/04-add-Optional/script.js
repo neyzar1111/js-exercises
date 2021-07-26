@@ -10,16 +10,16 @@
 // (() => {
 //     // your code here
 // })();
-let heroes =
+let heroes ;
 fetch("http://localhost:63342/01.js-exercises/_shared/api.json")
     .then(function (resp) {
         return resp.json()
     })
     .then(function (data) {
-        console.log(data)
         heroes = data.heroes;
-    })
+        console.log(heroes)
 
+    })
 document.querySelector("#run").addEventListener("click", addingNewHeroes);
 
 function addingNewHeroes (e){
