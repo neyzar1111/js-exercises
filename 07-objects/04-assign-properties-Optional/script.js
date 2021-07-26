@@ -26,14 +26,19 @@
         os: "linux",
         user: null,
     };
-    var o1 = { a: 1 };
-    var o2 = { b: 2 };
-    var o3 = { c: 3 };
 
-    let fillComps = computers.forEach((e,i)=>{
-            return Object.assign(e, defaultProps)
-    })
-    console.log(fillComps)
+    for(let i = 0; i< computers.length; i++){
 
+        if(computers[i].hasOwnProperty("user") === false){
+            computers[i].user = defaultProps.user
+        }
+        if(computers[i].hasOwnProperty("available") === false){
+            computers[i].available = defaultProps.available
+        }
+        if (computers[i].hasOwnProperty("os") === false){
+            computers[i].os = defaultProps.os
+        }
+    }
+    console.table(computers);
 
 })();
